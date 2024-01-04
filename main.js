@@ -1,43 +1,63 @@
 // YOUR CODE GOES HERE!!!
 /*************************/
-function getFirstName(obj){
-  return obj.firstName
+function getFirstName(person){
+  return person.firstName
 }
 
-function getLastName(obj){
-  return obj.lastName
+function getLastName(person){
+  return person.lastName
 }
 
-function getFullName(obj){
-  return obj.firstName + " " + obj.lastName
+function getFullName(person){
+  return person.firstName + " " + person.lastName
 }
 
-function setFirstName(obj, str){
-obj.firstName = str
-  return obj
+function setFirstName(person, newName){
+person.firstName = newName
+  return person
+}
+//access the firstName property of the person,
+//redefine to newName
+//return person object back
+
+function setAge(person, newAge){
+person.age = newAge
+return person
 }
 
-function setAge(obj, num){
-obj.age = num
-return obj
+function giveBirthday(person){
+  if(person.age === undefined){
+    person.age = 1
+    }else{
+      person.age = person.age + 1
 }
-
-function giveBirthday(obj){
-  if(obj.age >= 1){
-    obj.age += 1
-  }else{
-    if(obj.age = 1)
+  // if(person.age >= 1){
+  //   person.age += 1
+  // }else{
+  //   if(person.age = 1)
   
-return obj
+return person
 }
-}
+//check if there is an age property
+//if not, create on
+//if so, increment
+//return object to user
+
 
 function marry(person1, person2){
 person1.married = true
- return true
+person2.married = true
+person1.spouseName = getFullName(person2)
+person2.spouseName = getFullName(person1)
+return person1
 }
 
-
+function divorce(person1, person2){
+person1.married = false
+person2.married = false
+delete person1.spouseName
+delete person2.spouseName
+}
 
 
 /****************************/
