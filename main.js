@@ -1,5 +1,41 @@
 // YOUR CODE GOES HERE!!!
 /*************************/
+function getFirstName(obj){
+  return obj.firstName
+}
+
+function getLastName(obj){
+  return obj.lastName
+}
+
+function getFullName(obj){
+  return obj.firstName + " " + obj.lastName
+}
+
+function setFirstName(obj, str){
+obj.firstName = str
+  return obj
+}
+
+function setAge(obj, num){
+obj.age = num
+return obj
+}
+
+function giveBirthday(obj){
+  if(obj.age >= 1){
+    obj.age += 1
+  }else{
+    if(obj.age = 1)
+  
+return obj
+}
+}
+
+function marry(person1, person2){
+person1.married = true
+ return true
+}
 
 
 
